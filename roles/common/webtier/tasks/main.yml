@@ -1,5 +1,6 @@
 - name: Install the latest version of Apache
+  become: true
   ansible.builtin.yum:
     name: httpd
     state: latest
-    become: true
+    
