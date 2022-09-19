@@ -1,0 +1,9 @@
+---
+- hosts: Webserver
+  become: yes
+  tasks: 
+    - name: Install Apache2
+      yum:
+        name: apache2
+        state: present
+...
