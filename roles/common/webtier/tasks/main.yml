@@ -1,4 +1,3 @@
----
   tasks: 
     - name: Install Apache2
       yum:
