@@ -1,0 +1,4 @@
+---
+- hosts: Webserver
+  roles:
+    - role: 'roles/common/webtier'
