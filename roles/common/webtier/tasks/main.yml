@@ -2,3 +2,4 @@
   ansible.builtin.yum:
     name: httpd
     state: latest
+    become: true
