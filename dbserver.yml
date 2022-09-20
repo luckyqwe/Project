@@ -1,9 +1,5 @@
 ---
 - hosts: Dbserver
   become: yes
-  tasks: 
-    - name: Install Apache2
-      yum:
-        name: apache2
-        state: present
-...
+  roles:
+    role: '/roles/common/webtier'
