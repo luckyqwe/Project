@@ -1,5 +1,6 @@
 - name: Hello World Sample
   hosts: all
+  become: true
   tasks:
     - name: install apache2
       yum:
