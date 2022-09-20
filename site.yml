@@ -1,7 +1,6 @@
----
-- hosts: all
-  become: true
+- name: Hello World Sample
+  hosts: all
   tasks:
-    yum:
-      name: apache2
-      state: present
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
