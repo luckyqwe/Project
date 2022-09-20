@@ -1,6 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+    - name: install apache2
+      yum:
+        name: apache2
+        state: present
