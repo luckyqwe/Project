@@ -1,8 +1,9 @@
-- name: Hello World Sample
-  hosts: all
+#This playbbok will install HTTP server and will not start the server.
+
+---
+- hosts: all
   become: true
   tasks:
-    - name: tomcat
-      yum:
-        name: tomcat
-        state: present
+    - name: Install Apache HTTP server
+      yum: name=httpd update_cache=yes state=latest
+...
