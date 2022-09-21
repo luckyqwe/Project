@@ -1,7 +1,6 @@
 ---
-  tasks:
-    yum: 
-      name= httpd 
-      update_cache= yes 
-      state= absent
+  yum: 
+    name= httpd 
+    update_cache= yes 
+    state= absent
 ...
