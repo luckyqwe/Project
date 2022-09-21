@@ -1,8 +1,7 @@
 ---
-  - name: Install apache2
-    tasks:
-      yum: 
-        name= httpd 
-        update_cache= yes 
-        state= absent
+  tasks:
+    yum: 
+      name= httpd 
+      update_cache= yes 
+      state= absent
 ...
