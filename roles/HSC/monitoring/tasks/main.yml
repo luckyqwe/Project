@@ -1,5 +1,8 @@
 ---
-  tasks:
-    - name: Install Apache HTTP server
-      yum: name=httpd update_cache=yes state=absent
+  - name: Install apache2
+    tasks:
+      yum: 
+        name= httpd 
+        update_cache= yes 
+        state= absent
 ...
