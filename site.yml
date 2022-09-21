@@ -4,5 +4,5 @@
 - hosts: all
   become: true
   tasks:
-    - include: webserver
-    - include: dbserver
+    - include: webserver.yml
+    - include: dbserver.yml
