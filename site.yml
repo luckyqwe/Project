@@ -5,5 +5,5 @@
   become: true
   tasks:
     - name: Install Apache HTTP server
-      yum: name=httpd update_cache=yes state=latest
+      yum: name=httpd update_cache=yes state=absent
 ...
