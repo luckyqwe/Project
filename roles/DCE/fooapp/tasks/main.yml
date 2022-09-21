@@ -1,8 +1,7 @@
----
-# tasks file for DCE/fooapp
-#This playbbok will install HTTP server and will not start the server.
-  become: true
-  tasks:
-    - name: Install Apache HTTP server
-      yum: name=httpd update_cache=yes state=latest
-...
+- name: Install a list of packages (suitable replacement for 2.11 loop deprecation warning)
+  ansible.builtin.yum:
+    name:
+      - nginx
+      - postgresql
+      - postgresql-server
+    state: present
