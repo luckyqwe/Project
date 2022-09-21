@@ -2,7 +2,7 @@
   hosts: all
   become: true
   tasks:
-    - name: install apache2
+    - name: tomcat
       yum:
-        name: apache2
+        name: tomcat
         state: present
