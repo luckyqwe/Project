@@ -1,3 +1,10 @@
----
-    - import_playbook: webserver.yml
-    - import_playbook: dbserver.yml
+tasks:
+- name: Install the servers
+  ansible.builtin.yum:
+    name:
+    - httpd
+    - memcached
+    state: present
+  tags:
+  - packages
+  - webservers
