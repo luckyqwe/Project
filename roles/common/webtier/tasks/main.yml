@@ -1,6 +1,9 @@
-- name: Install the latest version of Apache
-  become: true
+- name: Install the servers
   ansible.builtin.yum:
-    name: httpd
-    state: latest
-    
+    name:
+    - httpd
+    - memcached
+    state: present
+  tags:
+  - packages
+  - webservers
