@@ -5,3 +5,5 @@
       - postgresql
       - postgresql-server
     state: present
+    tag:
+      - install
