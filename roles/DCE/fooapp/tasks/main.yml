@@ -6,4 +6,4 @@
       - postgresql-server
     state: present
     tag:
-      - install
+      - hold
