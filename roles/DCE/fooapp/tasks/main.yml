@@ -5,5 +5,5 @@
       - postgresql
       - postgresql-server
     state: present
-    tags:
-      - hold
+  tags:
+    - hold
