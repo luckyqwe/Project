@@ -4,8 +4,8 @@
   roles:
    - role: 'roles/HSC/monitoring'
      tags:
-       - hold
+       - hold_HSC
    - role: 'roles/common/webtier'
      tags:
-       - upcome
+       - hold_common
   
