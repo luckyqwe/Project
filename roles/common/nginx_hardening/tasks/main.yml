@@ -1,6 +1,5 @@
 ---
-- tasks:
-    - name: Install the latest version of nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: latest
+- name: Install the latest version of nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: latest
