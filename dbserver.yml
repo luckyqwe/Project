@@ -11,6 +11,7 @@
      tags:
        - hold_HSC
    - role: 'roles/common/webtier'
+   - role: 'roles/common/nginx_hardening'
      tags:
        - hold_common
   
