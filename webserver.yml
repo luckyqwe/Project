@@ -2,11 +2,6 @@
 - hosts: webserver
   become: true
   name: execute role
-  pre_tasks:
-    - name: Install the latest version of nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: latest
   roles:
     - role: 'roles/DCE/fooapp'
       tags:
