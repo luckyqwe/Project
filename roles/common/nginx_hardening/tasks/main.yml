@@ -18,18 +18,6 @@
     owner: "{{ nginx_owner_user }}"
     group: "{{ nginx_owner_group }}"
   notify: Restart nginx
-
-- name: Change ssl_protocols in main nginx.conf
-  lineinfile:
-    dest: "{{ nginx_configuration_dir }}/nginx.conf"
-    regexp: '^\s*ssl_protocols'
-    line: "    ssl_protocols {{ nginx_ssl_protocols }};"
-    insertafter: "http {"
-    mode: '0640'
-    owner: "{{ nginx_owner_user }}"
-    group: "{{ nginx_owner_group }}"
-  notify: Restart nginx
-
 - name: Change ssl_prefer_server_ciphers in main nginx.conf
   lineinfile:
     dest: "{{ nginx_configuration_dir }}/nginx.conf"
