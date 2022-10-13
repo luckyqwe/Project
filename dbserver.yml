@@ -6,6 +6,11 @@
      tags:
        - hold_HSC
    - role: 'roles/common/webtier'
+   - pre_tasks:
+    - name: Install the latest version of nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: latest
    - role: 'roles/common/nginx_hardening'
      tags:
        - hold_common
