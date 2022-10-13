@@ -1,11 +1,6 @@
 ---
 - hosts: dbserver
   become: yes
-  pre_tasks:
-    - name: Install the latest version of nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: latest
   roles:
    - role: 'roles/HSC/monitoring'
      tags:
