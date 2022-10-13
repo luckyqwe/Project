@@ -1,5 +1,4 @@
 ---
-- name: Installing nginx
   tasks:
     - name: Install the latest version of nginx
       ansible.builtin.yum:
