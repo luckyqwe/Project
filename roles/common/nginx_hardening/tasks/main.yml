@@ -1,9 +1,4 @@
 ---
-- pre_tasks:
-    - name: Install the latest version of nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: latest
 - name: Create additional configuration
   template:
     src: "hardening.conf.j2"
