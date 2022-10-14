@@ -1,9 +1,7 @@
 ---
-- name: Create additional configuration
-  template:
-    src: "hardening.conf.j2"
-    dest: "{{ nginx_configuration_dir }}/conf.d/90.hardening.conf"
-    mode: '0600'
-    owner: "{{ nginx_owner_user }}"
-    group: "{{ nginx_owner_group }}"
-  notify: Restart nginx
+- name: Install the latest version of nginx
+  ansible.builtin.yum:
+    name: nginx
+    state: latest
+- name: Include task list in play only if the condition is true
+  ansible.builtin.include: "hardening.yml"
