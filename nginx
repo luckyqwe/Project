@@ -1,7 +1,0 @@
----
-- hosts: all
-  name: Installing nginx
-  tasks:
-    yum:
-      name: nginx
-      state: latest
